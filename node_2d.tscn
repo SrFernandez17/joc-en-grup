@@ -7,6 +7,18 @@
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=176340228]
 modulate = Color(0.31764707, 1, 0.09803922, 1)
+top_level = true
 position = Vector2(284, 204)
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_0e48y")
 script = ExtResource("2_epypp")
+
+[node name="Camera2D" type="Camera2D" parent="Sprite2D" unique_id=1266394998]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=607475899]
+
+[node name="Sprite2D" type="Sprite2D" parent="AnimatedSprite2D" unique_id=841805648]
+modulate = Color(1, 0.84970194, 0.2699454, 1)
+visibility_layer = 512
+scale = Vector2(500, 500)
+texture = ExtResource("1_0e48y")
