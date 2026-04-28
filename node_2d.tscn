@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://d2gl35e08q7y1" path="res://icon.svg" id="1_0e48y"]
 [ext_resource type="Script" uid="uid://eqwwmg60bnbl" path="res://sprite_2d.gd" id="2_epypp"]
+[ext_resource type="Texture2D" uid="uid://dfpbcn42ewp55" path="res://fons sorra.jpg" id="3_epypp"]
 
 [node name="Node2D" type="Node2D" unique_id=437034114]
 
@@ -15,10 +16,7 @@ script = ExtResource("2_epypp")
 
 [node name="Camera2D" type="Camera2D" parent="Sprite2D" unique_id=1266394998]
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=607475899]
-
-[node name="Sprite2D" type="Sprite2D" parent="AnimatedSprite2D" unique_id=841805648]
-modulate = Color(1, 0.84970194, 0.2699454, 1)
-visibility_layer = 512
-scale = Vector2(500, 500)
-texture = ExtResource("1_0e48y")
+[node name="FONS" type="Sprite2D" parent="." unique_id=1509923198]
+position = Vector2(301, 175)
+scale = Vector2(2, 2)
+texture = ExtResource("3_epypp")
