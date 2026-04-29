@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dfpbcn42ewp55"
-path="res://.godot/imported/fons sorra.jpg-b80e0d3ded31e266b925636c3502ef48.ctex"
+uid="uid://7bfc1wff10xc"
+path="res://.godot/imported/tilemap.png-3595a087168cc7e708a221521ef82d73.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://fons sorra.jpg"
-dest_files=["res://.godot/imported/fons sorra.jpg-b80e0d3ded31e266b925636c3502ef48.ctex"]
+source_file="res://IMATGES/tilemap.png"
+dest_files=["res://.godot/imported/tilemap.png-3595a087168cc7e708a221521ef82d73.ctex"]
 
 [params]
 

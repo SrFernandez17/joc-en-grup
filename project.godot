@@ -13,7 +13,7 @@ config_version=5
 config/name="joc_en_grup"
 run/main_scene="uid://qjam8qdbmy2p"
 config/features=PackedStringArray("4.6", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://IMATGES/icon.svg"
 
 [physics]
 
