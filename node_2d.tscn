@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://qjam8qdbmy2p"]
 
-[ext_resource type="Texture2D" uid="uid://d2gl35e08q7y1" path="res://IMATGES/icon.svg" id="1_0e48y"]
+[ext_resource type="Texture2D" uid="uid://d0bkatswnq2mo" path="res://tile_0008.png" id="1_epypp"]
 [ext_resource type="Script" uid="uid://eqwwmg60bnbl" path="res://sprite_2d.gd" id="2_epypp"]
 [ext_resource type="Texture2D" uid="uid://dfpbcn42ewp55" path="res://IMATGES/fons sorra.jpg" id="3_epypp"]
 [ext_resource type="Texture2D" uid="uid://7bfc1wff10xc" path="res://IMATGES/tilemap.png" id="4_0hol4"]
@@ -537,11 +537,10 @@ sources/0 = SubResource("TileSetAtlasSource_0hol4")
 [node name="Node2D" type="Node2D" unique_id=437034114]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=176340228]
-modulate = Color(0.31764707, 1, 0.09803922, 1)
 top_level = true
-position = Vector2(284, 204)
-scale = Vector2(0.2, 0.2)
-texture = ExtResource("1_0e48y")
+texture_filter = 1
+position = Vector2(298.00003, 284)
+texture = ExtResource("1_epypp")
 script = ExtResource("2_epypp")
 
 [node name="Camera2D" type="Camera2D" parent="Sprite2D" unique_id=1266394998]
