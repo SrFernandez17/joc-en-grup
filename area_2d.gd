@@ -1,16 +1,13 @@
 extends Area2D
-#var velocitat := 100
-#@onready var RATA: Sprite2D = $RATA
 
-#Called when the node enters the scene tree for the first time.
+@export var velocitat = 600
+var direction = Vector2.ZERO
 func _ready() -> void:
 	pass # Replace with function body.
 
 
 
 	
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta: float) -> void:
-	#var direccio:= Input.get_vector("ui_left","ui_right","ui_up","ui_down")
-	#global_position += direccio*velocitat*delta
-	#RATA.position = position
+
+func _process(delta: float) -> void:
+	position += direction * velocitat * delta

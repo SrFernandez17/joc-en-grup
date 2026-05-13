@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://byamgaofah7e3"]
+
+[ext_resource type="Script" uid="uid://dg6r76fqjiu88" path="res://area_2d.gd" id="1_yrx8y"]
+[ext_resource type="Texture2D" uid="uid://davwx3dq23kas" path="res://IMATGES/tile_0023.png" id="2_iww4j"]
+
+[node name="Bala" type="Area2D" unique_id=1062336206]
+script = ExtResource("1_yrx8y")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1817338646]
+texture_filter = 3
+texture = ExtResource("2_iww4j")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=34387924]
+polygon = PackedVector2Array(3, -2, 3, 2, 2, 2, 2, 3, -2, 3, -2, 2, -3, 2, -3, -2, -2, -2, -2, -3, 2, -3, 2, -2)
