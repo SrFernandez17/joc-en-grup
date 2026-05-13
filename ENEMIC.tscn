@@ -1,0 +1,80 @@
+[gd_scene format=3 uid="uid://bagcij4ofhc5h"]
+
+[ext_resource type="Texture2D" uid="uid://r0ys5vcex3du" path="res://IMATGES/ENEMICS.png" id="1_rb8nl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jdbsi"]
+size = Vector2(17, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0fwei"]
+atlas = ExtResource("1_rb8nl")
+region = Rect2(0, 75, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2fb13"]
+atlas = ExtResource("1_rb8nl")
+region = Rect2(50, 75, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n2um7"]
+atlas = ExtResource("1_rb8nl")
+region = Rect2(75, 75, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sj1si"]
+atlas = ExtResource("1_rb8nl")
+region = Rect2(0, 75, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i25ku"]
+atlas = ExtResource("1_rb8nl")
+region = Rect2(25, 75, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f4m7a"]
+atlas = ExtResource("1_rb8nl")
+region = Rect2(50, 75, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_72076"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0fwei")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2fb13")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n2um7")
+}],
+"loop": true,
+"name": &"MORT",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sj1si")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i25ku")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f4m7a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i25ku")
+}],
+"loop": true,
+"name": &"MOVIMENT",
+"speed": 5.0
+}]
+
+[node name="Node2D" type="Node2D" unique_id=272754688]
+
+[node name="ENEMIC" type="Area2D" parent="." unique_id=1241478113]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ENEMIC" unique_id=1585960377]
+position = Vector2(0.5, 2)
+shape = SubResource("RectangleShape2D_jdbsi")
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="ENEMIC" unique_id=1080968639]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_72076")
+animation = &"MOVIMENT"
+frame_progress = 0.4582432
+metadata/_edit_group_ = true
