@@ -12,7 +12,7 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("ui_accept"):
 		dispara()
-	var direccio = Input.get_vector("ui_left","ui_right","ui_up","ui_down")
+	var direccio = Input.get_vector("esquerra","dreta","amunt","avall")
 	velocity = direccio * SPEED
 	move_and_slide()
 	RATA.position = position
