@@ -586,3 +586,6 @@ tile_set = SubResource("TileSet_q6r6c")
 
 [node name="Bales" type="Node2D" parent="." unique_id=1190492216]
 unique_name_in_owner = true
+
+[node name="ENEMICS" type="Node2D" parent="." unique_id=1227005004]
+unique_name_in_owner = true

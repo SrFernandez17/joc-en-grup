@@ -6,6 +6,7 @@ const SPEED = 100.0
 var last_dir: Vector2 = Vector2.ZERO
 
 func _ready() -> void:
+	Global.Jugador = self
 	position.x = 200
 	position.y = 500
 
