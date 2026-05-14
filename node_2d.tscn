@@ -629,3 +629,9 @@ unique_name_in_owner = true
 unique_name_in_owner = true
 script = ExtResource("6_d21ai")
 escena_enemic = ExtResource("7_d21ai")
+
+[node name="Timer" type="Timer" parent="ENEMICS" unique_id=884681703]
+wait_time = 2.0
+autostart = true
+
+[connection signal="timeout" from="ENEMICS/Timer" to="ENEMICS" method="_on_timer_timeout"]

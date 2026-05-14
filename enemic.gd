@@ -3,8 +3,11 @@ var velocitat = randf_range(80,100)
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
-
+	velocitat = randf_range(60,80)
+	var posicioX = randf_range(-500,500)
+	var posicioY = randf_range(-500,500)
+	position.x = posicioX
+	position.y = posicioY
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
