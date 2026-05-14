@@ -4,7 +4,9 @@
 [ext_resource type="Script" uid="uid://dg6r76fqjiu88" path="res://area_2d.gd" id="1_q6r6c"]
 [ext_resource type="Texture2D" uid="uid://7bfc1wff10xc" path="res://IMATGES/tilemap.png" id="4_0hol4"]
 [ext_resource type="Texture2D" uid="uid://f3jstm7flvow" path="res://IMATGES/tilemap_player.png" id="4_q6r6c"]
+[ext_resource type="Script" uid="uid://dx4b7emye45ug" path="res://enemics.gd" id="6_d21ai"]
 [ext_resource type="PackedScene" uid="uid://byamgaofah7e3" path="res://bala.tscn" id="6_kdubu"]
+[ext_resource type="PackedScene" uid="uid://bagcij4ofhc5h" path="res://ENEMIC.tscn" id="7_d21ai"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d21ai"]
 size = Vector2(17, 16)
@@ -625,3 +627,5 @@ unique_name_in_owner = true
 
 [node name="ENEMICS" type="Node2D" parent="." unique_id=1227005004]
 unique_name_in_owner = true
+script = ExtResource("6_d21ai")
+escena_enemic = ExtResource("7_d21ai")

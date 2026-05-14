@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://bagcij4ofhc5h"]
 
+[ext_resource type="Script" uid="uid://be28gisy32xgf" path="res://enemic.gd" id="1_jdbsi"]
 [ext_resource type="Texture2D" uid="uid://r0ys5vcex3du" path="res://IMATGES/ENEMICS.png" id="1_rb8nl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jdbsi"]
@@ -63,16 +64,15 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Node2D" type="Node2D" unique_id=272754688]
+[node name="ENEMIC" type="Area2D" unique_id=1241478113]
+script = ExtResource("1_jdbsi")
 
-[node name="ENEMIC" type="Area2D" parent="." unique_id=1241478113]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ENEMIC" unique_id=1585960377]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1585960377]
 position = Vector2(0.5, 2)
 shape = SubResource("RectangleShape2D_jdbsi")
 metadata/_edit_group_ = true
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="ENEMIC" unique_id=1080968639]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1080968639]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_72076")
 animation = &"MOVIMENT"
