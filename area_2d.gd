@@ -11,3 +11,7 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	position += direction * velocitat * delta
+
+
+func _on_timer_timeout() -> void:
+	queue_free()

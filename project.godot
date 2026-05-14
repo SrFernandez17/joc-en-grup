@@ -15,6 +15,10 @@ run/main_scene="uid://qjam8qdbmy2p"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://IMATGES/icon.svg"
 
+[autoload]
+
+Global="*uid://bptkoh73ivb4f"
+
 [input]
 
 dreta={
