@@ -3,8 +3,9 @@
 [ext_resource type="Script" uid="uid://d3lwab5b244p3" path="res://personatge.gd" id="1_kdubu"]
 [ext_resource type="Script" uid="uid://dg6r76fqjiu88" path="res://area_2d.gd" id="1_q6r6c"]
 [ext_resource type="Script" uid="uid://eqwwmg60bnbl" path="res://sprite_2d.gd" id="2_epypp"]
+[ext_resource type="PackedScene" uid="uid://bagcij4ofhc5h" path="res://ENEMIC.tscn" id="2_kdubu"]
 [ext_resource type="Texture2D" uid="uid://7bfc1wff10xc" path="res://IMATGES/tilemap.png" id="4_0hol4"]
-[ext_resource type="PackedScene" uid="uid://byamgaofah7e3" path="res://bala.tscn" id="6_kdubu"]
+[ext_resource type="Script" uid="uid://dx4b7emye45ug" path="res://enemics.gd" id="6_d21ai"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_q6r6c"]
 load_path = "res://.godot/imported/tile_0008.png-5f56d03c20869073c1160304abeae429.ctex"
@@ -551,7 +552,7 @@ sources/0 = SubResource("TileSetAtlasSource_0hol4")
 top_level = true
 visibility_layer = 4
 script = ExtResource("1_kdubu")
-escena_bala = ExtResource("6_kdubu")
+escena_bala = ExtResource("2_kdubu")
 
 [node name="RATA" type="Sprite2D" parent="PERSONATGE" unique_id=176340228]
 top_level = true
@@ -589,3 +590,5 @@ unique_name_in_owner = true
 
 [node name="ENEMICS" type="Node2D" parent="." unique_id=1227005004]
 unique_name_in_owner = true
+script = ExtResource("6_d21ai")
+escena_enemic = ExtResource("2_kdubu")
