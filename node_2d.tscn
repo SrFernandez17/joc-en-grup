@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://dx4b7emye45ug" path="res://enemics.gd" id="6_d21ai"]
 [ext_resource type="PackedScene" uid="uid://byamgaofah7e3" path="res://bala.tscn" id="6_kdubu"]
 [ext_resource type="PackedScene" uid="uid://bagcij4ofhc5h" path="res://ENEMIC.tscn" id="7_d21ai"]
+[ext_resource type="AudioStream" uid="uid://cdx7dx0iia3qe" path="res://Geometry Dash - Level 1： Stereo Madness (All Coins) [HW41UNolUec].mp3" id="8_rj586"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d21ai"]
 size = Vector2(17, 16)
