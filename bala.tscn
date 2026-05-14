@@ -12,3 +12,9 @@ texture = ExtResource("2_iww4j")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=34387924]
 polygon = PackedVector2Array(3, -2, 3, 2, 2, 2, 2, 3, -2, 3, -2, 2, -3, 2, -3, -2, -2, -2, -2, -3, 2, -3, 2, -2)
+
+[node name="Timer" type="Timer" parent="." unique_id=1456147636]
+wait_time = 0.4
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
