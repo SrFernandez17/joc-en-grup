@@ -2,18 +2,56 @@
 
 [ext_resource type="Script" uid="uid://d3lwab5b244p3" path="res://personatge.gd" id="1_kdubu"]
 [ext_resource type="Script" uid="uid://dg6r76fqjiu88" path="res://area_2d.gd" id="1_q6r6c"]
-[ext_resource type="Script" uid="uid://eqwwmg60bnbl" path="res://sprite_2d.gd" id="2_epypp"]
 [ext_resource type="Texture2D" uid="uid://7bfc1wff10xc" path="res://IMATGES/tilemap.png" id="4_0hol4"]
+[ext_resource type="Texture2D" uid="uid://f3jstm7flvow" path="res://IMATGES/tilemap_player.png" id="4_q6r6c"]
 [ext_resource type="PackedScene" uid="uid://byamgaofah7e3" path="res://bala.tscn" id="6_kdubu"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_q6r6c"]
-load_path = "res://.godot/imported/tile_0008.png-5f56d03c20869073c1160304abeae429.ctex"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d21ai"]
 size = Vector2(17, 16)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rj586"]
 size = Vector2(17, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kdubu"]
+atlas = ExtResource("4_q6r6c")
+region = Rect2(0, 50, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d21ai"]
+atlas = ExtResource("4_q6r6c")
+region = Rect2(0, 50, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rj586"]
+atlas = ExtResource("4_q6r6c")
+region = Rect2(25, 50, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4d7sh"]
+atlas = ExtResource("4_q6r6c")
+region = Rect2(50, 50, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ir8iy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kdubu")
+}],
+"loop": true,
+"name": &"aturat",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d21ai")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rj586")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4d7sh")
+}],
+"loop": true,
+"name": &"corre",
+"speed": 5.0
+}]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_q6r6c"]
 texture = ExtResource("4_0hol4")
@@ -553,13 +591,6 @@ visibility_layer = 4
 script = ExtResource("1_kdubu")
 escena_bala = ExtResource("6_kdubu")
 
-[node name="RATA" type="Sprite2D" parent="PERSONATGE" unique_id=176340228]
-top_level = true
-texture_filter = 1
-texture = SubResource("CompressedTexture2D_q6r6c")
-script = ExtResource("2_epypp")
-metadata/_edit_group_ = true
-
 [node name="Camera2D" type="Camera2D" parent="PERSONATGE" unique_id=292500288]
 zoom = Vector2(2.2, 2.2)
 
@@ -573,6 +604,11 @@ script = ExtResource("1_q6r6c")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PERSONATGE/Area2D" unique_id=839279501]
 position = Vector2(0.5, 4)
 shape = SubResource("RectangleShape2D_rj586")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="PERSONATGE" unique_id=1382751370]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_ir8iy")
+animation = &"corre"
 
 [node name="MAPA" type="TileMapLayer" parent="." unique_id=121449665]
 visibility_layer = 2
