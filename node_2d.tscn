@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://dx4b7emye45ug" path="res://enemics.gd" id="6_d21ai"]
 [ext_resource type="PackedScene" uid="uid://byamgaofah7e3" path="res://bala.tscn" id="6_kdubu"]
 [ext_resource type="PackedScene" uid="uid://bagcij4ofhc5h" path="res://ENEMIC.tscn" id="7_d21ai"]
+[ext_resource type="AudioStream" uid="uid://cdx7dx0iia3qe" path="res://Geometry Dash - Level 1： Stereo Madness (All Coins) [HW41UNolUec].mp3" id="8_rj586"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d21ai"]
 size = Vector2(17, 16)
@@ -629,3 +630,9 @@ unique_name_in_owner = true
 unique_name_in_owner = true
 script = ExtResource("6_d21ai")
 escena_enemic = ExtResource("7_d21ai")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1338554678]
+stream = ExtResource("8_rj586")
+autoplay = true
+
+[connection signal="finished" from="AudioStreamPlayer2D" to="PERSONATGE" method="_on_audio_stream_player_2d_finished"]

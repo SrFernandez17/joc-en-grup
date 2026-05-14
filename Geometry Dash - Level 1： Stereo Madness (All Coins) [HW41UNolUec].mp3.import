@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cdx7dx0iia3qe"
+path="res://.godot/imported/Geometry Dash - Level 1： Stereo Madness (All Coins) [HW41UNolUec].mp3-2c6e9ee38e125e9818fe4111b59629df.mp3str"
+
+[deps]
+
+source_file="res://Geometry Dash - Level 1： Stereo Madness (All Coins) [HW41UNolUec].mp3"
+dest_files=["res://.godot/imported/Geometry Dash - Level 1： Stereo Madness (All Coins) [HW41UNolUec].mp3-2c6e9ee38e125e9818fe4111b59629df.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
