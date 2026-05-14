@@ -40,3 +40,7 @@ func anima(velocity:Vector2):
 	else:
 		animated_sprite_2d.play("aturat") 
 		
+
+
+func _on_audio_stream_player_2d_finished() -> void:
+	$AudioStreamPlayer.play()
