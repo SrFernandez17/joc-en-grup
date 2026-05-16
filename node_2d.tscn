@@ -7,7 +7,6 @@
 [ext_resource type="Script" uid="uid://dx4b7emye45ug" path="res://enemics.gd" id="6_d21ai"]
 [ext_resource type="PackedScene" uid="uid://byamgaofah7e3" path="res://bala.tscn" id="6_kdubu"]
 [ext_resource type="PackedScene" uid="uid://bagcij4ofhc5h" path="res://ENEMIC.tscn" id="7_d21ai"]
-[ext_resource type="AudioStream" uid="uid://cdx7dx0iia3qe" path="res://Geometry Dash - Level 1： Stereo Madness (All Coins) [HW41UNolUec].mp3" id="8_rj586"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d21ai"]
 size = Vector2(17, 16)
@@ -395,7 +394,9 @@ separation = Vector2i(1, 1)
 10:3/0 = 0
 11:3/0 = 0
 12:3/0 = 0
+12:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-5.3957634, 8, -0.71943665, -2.877739, 2.1583042, -2.877739, 5.755478, 0.8992939, 8, 1.2590122, 8, 8)
 13:3/0 = 0
+13:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 2.6978817, 3.5971737, 8, -8, 8)
 14:3/0 = 0
 15:3/0 = 0
 16:3/0 = 0
@@ -413,9 +414,13 @@ separation = Vector2i(1, 1)
 9:4/0 = 0
 9:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 10:4/0 = 0
+10:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-3.5971756, 0.5395775, -2.3381634, -5.935337, 1.2590103, -6.2950544, 4.1367493, 0.5395775, 3.2374554, 5.5756207, -2.8777409, 6.2950554)
 11:4/0 = 0
+11:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-3.956892, -0.17985725, -3.0576, -3.5971737, -4.136751, -8, 1.2590103, -6.2950544, 3.7770329, 1.0791531, 3.4173145, 6.2950554, -4.3166103, 6.4749146)
 12:4/0 = 0
+12:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-6.115198, -8, 8, -8, 8, 0.35971832, 4.4964676, 0.35971832, 2.1583042, 3.7770348, -0.8992939, 3.4173164, -3.0576, 0.35971832, -6.115198, -1.2590103)
 13:4/0 = 0
+13:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 0.17985725, -8, 6.115196, -5.935337, 5.755478, 0.71943474, -8, 0.71943474)
 14:4/0 = 0
 15:4/0 = 0
 16:4/0 = 0
@@ -545,6 +550,7 @@ separation = Vector2i(1, 1)
 2:11/0 = 0
 3:11/0 = 0
 4:11/0 = 0
+4:11/0/physics_layer_0/polygon_0/points = PackedVector2Array(-4.6763287, -4.856185, 4.4964676, -5.036044, 4.4964676, 5.036045, 2.6978798, 8, -2.6978817, 8, -4.6763287, 5.3957634)
 5:11/0 = 0
 6:11/0 = 0
 7:11/0 = 0
@@ -596,10 +602,12 @@ escena_bala = ExtResource("6_kdubu")
 
 [node name="Camera2D" type="Camera2D" parent="PERSONATGE" unique_id=292500288]
 zoom = Vector2(2.2, 2.2)
+metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PERSONATGE" unique_id=2146197571]
 position = Vector2(0.5, 4)
 shape = SubResource("RectangleShape2D_d21ai")
+metadata/_edit_group_ = true
 
 [node name="Area2D" type="Area2D" parent="PERSONATGE" unique_id=1707877895]
 script = ExtResource("1_q6r6c")
@@ -612,6 +620,7 @@ shape = SubResource("RectangleShape2D_rj586")
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_ir8iy")
 animation = &"corre"
+metadata/_edit_group_ = true
 
 [node name="MAPA" type="TileMapLayer" parent="." unique_id=121449665]
 visibility_layer = 2

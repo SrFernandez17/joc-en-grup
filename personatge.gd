@@ -4,10 +4,13 @@ const SPEED = 100.0
 @export var escena_bala: PackedScene
 var last_dir: Vector2 = Vector2.ZERO
 
+var posicioX = randf_range(-1300,1970)
+var posicioY = randf_range(-860,1500)
+
 func _ready() -> void:
 	Global.Jugador = self
-	position.x = 200
-	position.y = 500
+	position.x = posicioX
+	position.y = posicioY
 
 func _physics_process(_float) -> void:
 	if Input.is_action_just_pressed("ui_accept"):
@@ -15,6 +18,12 @@ func _physics_process(_float) -> void:
 	var direccio = Input.get_vector("esquerra","dreta","amunt","avall")
 	velocity = direccio * SPEED
 	move_and_slide()
+	
+	if Input.is_action_just_pressed("REROLL"):
+		var posicioX = randf_range(-1300,1900)
+		var posicioY = randf_range(-860,1500)
+		position.x = posicioX
+		position.y = posicioY
 	
 	if not direccio.is_zero_approx():
 		last_dir=direccio
@@ -39,8 +48,6 @@ func anima(velocity:Vector2):
 		animated_sprite_2d.play("corre")
 	else:
 		animated_sprite_2d.play("aturat") 
-		
-
 
 func _on_audio_stream_player_2d_finished() -> void:
 	$AudioStreamPlayer.play()

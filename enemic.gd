@@ -1,11 +1,11 @@
 extends Area2D
-var velocitat = randf_range(80,100)
+var velocitat = randf_range(60,100)
 @onready var animated_sprite_2d = $AnimatedSprite2D
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	velocitat = randf_range(60,80)
-	var posicioX = randf_range(-500,500)
-	var posicioY = randf_range(-500,500)
+	var posicioX = randf_range(-1500,1500)
+	var posicioY = randf_range(-1500,1500)
 	position.x = posicioX
 	position.y = posicioY
 
