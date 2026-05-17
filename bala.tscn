@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dg6r76fqjiu88" path="res://area_2d.gd" id="1_yrx8y"]
 [ext_resource type="Texture2D" uid="uid://davwx3dq23kas" path="res://IMATGES/tile_0023.png" id="2_iww4j"]
+[ext_resource type="AudioStream" uid="uid://c1dh8paloj3wr" path="res://lumora_studios-pixel-jump-319167.mp3" id="3_tqo1u"]
 
 [node name="Bala" type="Area2D" unique_id=1062336206]
 script = ExtResource("1_yrx8y")
@@ -17,4 +18,9 @@ polygon = PackedVector2Array(3, -2, 3, 2, 2, 2, 2, 3, -2, 3, -2, 2, -3, 2, -3, -
 wait_time = 0.4
 autostart = true
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1861798874]
+stream = ExtResource("3_tqo1u")
+autoplay = true
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

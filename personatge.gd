@@ -11,6 +11,7 @@ func _ready() -> void:
 	Global.Jugador = self
 	position.x = posicioX
 	position.y = posicioY
+	last_dir=Vector2.RIGHT
 
 func _physics_process(_float) -> void:
 	if Input.is_action_just_pressed("ui_accept"):
@@ -35,6 +36,10 @@ func dispara():
 	%Bales.add_child(bala)
 	bala.global_position = global_position
 	bala.direction = last_dir
+	if last_dir!=Vector2.ZERO:
+		bala.direction=last_dir
+	else:
+		bala.direction=Vector2.RIGHT
 
 func anima(velocity:Vector2):
 	if velocity.x > 0:
@@ -51,3 +56,6 @@ func anima(velocity:Vector2):
 
 func _on_audio_stream_player_2d_finished() -> void:
 	$AudioStreamPlayer.play()
+  
+ 
+	

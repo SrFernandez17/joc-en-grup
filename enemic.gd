@@ -27,4 +27,10 @@ func anima(velocitat: Vector2):
 	
 	elif velocitat.y != 0:
 		animated_sprite_2d.play("MOVIMENT")
-	
+func die() -> void:
+	queue_free()
+
+
+func _on_body_entered(body: Node2D) -> void:
+	if is_instance_valid(Global.Jugador) and body == Global.Jugador:
+		get_tree().quit()

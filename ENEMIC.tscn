@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://r0ys5vcex3du" path="res://IMATGES/ENEMICS.png" id="1_rb8nl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jdbsi"]
-size = Vector2(17, 20)
+size = Vector2(18, 20)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0fwei"]
 atlas = ExtResource("1_rb8nl")
@@ -68,7 +68,7 @@ animations = [{
 script = ExtResource("1_jdbsi")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1585960377]
-position = Vector2(0.5, 2)
+position = Vector2(1, 2)
 shape = SubResource("RectangleShape2D_jdbsi")
 metadata/_edit_group_ = true
 
@@ -78,3 +78,5 @@ sprite_frames = SubResource("SpriteFrames_72076")
 animation = &"MOVIMENT"
 frame_progress = 0.4582432
 metadata/_edit_group_ = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
