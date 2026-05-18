@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://c5hlv1if4i2rh"]
+
+[ext_resource type="Texture2D" uid="uid://dv2p84ry4ef2t" path="res://IMATGES/fonsdef.png" id="1_pop87"]
+[ext_resource type="FontFile" uid="uid://kr37xjdvjfwh" path="res://IMATGES/04B_30__.TTF" id="2_f3k0v"]
+[ext_resource type="Script" uid="uid://cv4168d3247ii" path="res://killsfinal.gd" id="3_bn6qf"]
+
+[node name="Mort" type="Control" unique_id=1426273352]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1194321396]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_pop87")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="." unique_id=1971292590]
+layout_mode = 0
+offset_left = 298.0
+offset_top = 185.0
+offset_right = 338.0
+offset_bottom = 208.0
+theme_override_fonts/font = ExtResource("2_f3k0v")
+script = ExtResource("3_bn6qf")

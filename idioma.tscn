@@ -10,7 +10,7 @@ bg_color = Color(0.3882353, 0.25490198, 0.17254902, 0.98039216)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xulgb"]
 bg_color = Color(0.3882353, 0.25490198, 0.17254902, 0.7882353)
 
-[node name="Control" type="Control" unique_id=955404614]
+[node name="Idioma" type="Control" unique_id=955404614]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
