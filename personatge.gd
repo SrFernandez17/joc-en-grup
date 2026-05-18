@@ -4,7 +4,7 @@ const SPEED = 100.0
 @export var escena_bala: PackedScene
 var last_dir: Vector2 = Vector2.ZERO
 
-var posicioX = randf_range(-1300,1970)
+var posicioX = randf_range(-1300,1970) 
 var posicioY = randf_range(-860,1500)
 
 func _ready() -> void:
@@ -56,6 +56,3 @@ func anima(velocity:Vector2):
 
 func _on_audio_stream_player_finished() -> void:
 	$AudioStreamPlayer.play()
-  
- 
-	

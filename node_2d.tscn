@@ -2,12 +2,16 @@
 
 [ext_resource type="Script" uid="uid://d3lwab5b244p3" path="res://personatge.gd" id="1_kdubu"]
 [ext_resource type="Script" uid="uid://dg6r76fqjiu88" path="res://area_2d.gd" id="1_q6r6c"]
+[ext_resource type="Script" uid="uid://b3eejws8ecw6i" path="res://CONTADOR.gd" id="3_ir8iy"]
 [ext_resource type="Texture2D" uid="uid://7bfc1wff10xc" path="res://IMATGES/tilemap.png" id="4_0hol4"]
+[ext_resource type="Script" uid="uid://b3o6h6pqpj0aa" path="res://contador_temps.gd" id="4_hqns4"]
 [ext_resource type="Texture2D" uid="uid://f3jstm7flvow" path="res://IMATGES/tilemap_player.png" id="4_q6r6c"]
+[ext_resource type="Script" uid="uid://8ao5w5uin3o1" path="res://contador_kills.gd" id="5_x0ka3"]
 [ext_resource type="Script" uid="uid://dx4b7emye45ug" path="res://enemics.gd" id="6_d21ai"]
 [ext_resource type="PackedScene" uid="uid://byamgaofah7e3" path="res://bala.tscn" id="6_kdubu"]
 [ext_resource type="PackedScene" uid="uid://bagcij4ofhc5h" path="res://ENEMIC.tscn" id="7_d21ai"]
 [ext_resource type="AudioStream" uid="uid://cdx7dx0iia3qe" path="res://Geometry Dash - Level 1： Stereo Madness (All Coins) [HW41UNolUec].mp3" id="8_rj586"]
+[ext_resource type="Script" uid="uid://xt5miaxn8kg0" path="res://TEMPSPERLENEMIC.gd" id="10_0h7mo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d21ai"]
 size = Vector2(17, 16)
@@ -605,6 +609,30 @@ escena_bala = ExtResource("6_kdubu")
 zoom = Vector2(2.2, 2.2)
 metadata/_edit_group_ = true
 
+[node name="CONTADOR" type="Label" parent="PERSONATGE/Camera2D" unique_id=382864797]
+texture_filter = 1
+texture_repeat = 1
+offset_left = -40.0
+offset_top = -120.0
+offset_right = -28.0
+offset_bottom = -88.0
+theme_override_font_sizes/font_size = 20
+text = "0"
+script = ExtResource("3_ir8iy")
+
+[node name="CONTADOR TEMPS" type="Timer" parent="PERSONATGE/Camera2D/CONTADOR" unique_id=46727660]
+autostart = true
+script = ExtResource("4_hqns4")
+
+[node name="CONTADOR KILLS" type="Label" parent="PERSONATGE/Camera2D" unique_id=2121636052]
+offset_left = 28.0
+offset_top = -113.0
+offset_right = 36.0
+offset_bottom = -95.0
+theme_override_font_sizes/font_size = 13
+text = "0"
+script = ExtResource("5_x0ka3")
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PERSONATGE" unique_id=2146197571]
 position = Vector2(0.5, 4)
 shape = SubResource("RectangleShape2D_d21ai")
@@ -641,13 +669,18 @@ unique_name_in_owner = true
 script = ExtResource("6_d21ai")
 escena_enemic = ExtResource("7_d21ai")
 
-[node name="Timer" type="Timer" parent="ENEMICS" unique_id=884681703]
-wait_time = 2.0
+[node name="TEMPSPERLENEMIC" type="Timer" parent="ENEMICS" unique_id=411232949]
+autostart = true
+script = ExtResource("10_0h7mo")
+
+[node name="SPAWN" type="Timer" parent="ENEMICS" unique_id=884681703]
 autostart = true
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1147994036]
 stream = ExtResource("8_rj586")
 autoplay = true
 
+[connection signal="timeout" from="PERSONATGE/Camera2D/CONTADOR/CONTADOR TEMPS" to="PERSONATGE/Camera2D/CONTADOR/CONTADOR TEMPS" method="_on_contador_temps_timeout"]
 [connection signal="area_entered" from="PERSONATGE/Area2D" to="PERSONATGE" method="_on_area_2d_area_entered"]
-[connection signal="timeout" from="ENEMICS/Timer" to="ENEMICS" method="_on_timer_timeout"]
+[connection signal="timeout" from="ENEMICS/TEMPSPERLENEMIC" to="ENEMICS/TEMPSPERLENEMIC" method="_on_timeout"]
+[connection signal="timeout" from="ENEMICS/SPAWN" to="ENEMICS" method="_on_timer_timeout"]
