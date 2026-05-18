@@ -1,0 +1,72 @@
+[gd_scene format=3 uid="uid://cpqrpdy1pa1qp"]
+
+[ext_resource type="Texture2D" uid="uid://dv2p84ry4ef2t" path="res://IMATGES/fonsdef.png" id="1_1k0im"]
+[ext_resource type="Script" uid="uid://c00vmij6qh5jx" path="res://idioma.gd" id="1_cl5dy"]
+[ext_resource type="FontFile" uid="uid://kr37xjdvjfwh" path="res://IMATGES/04B_30__.TTF" id="2_cl5dy"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1wyps"]
+bg_color = Color(0.3882353, 0.25490198, 0.17254902, 0.98039216)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xulgb"]
+bg_color = Color(0.3882353, 0.25490198, 0.17254902, 0.7882353)
+
+[node name="Control" type="Control" unique_id=955404614]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cl5dy")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=238043710]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_1k0im")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="." unique_id=554557523]
+modulate = Color(0.39, 0.25531998, 0.1716, 1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -175.5
+offset_top = -11.5
+offset_right = 175.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_cl5dy")
+theme_override_font_sizes/font_size = 41
+text = "Perque vols canviar
+ el idioma 
+si ja ho entens"
+horizontal_alignment = 1
+
+[node name="Tornar" type="Button" parent="." unique_id=2038987077]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -75.0
+offset_top = -176.0
+offset_right = 75.5
+offset_bottom = -125.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("2_cl5dy")
+theme_override_font_sizes/font_size = 21
+theme_override_styles/normal = SubResource("StyleBoxFlat_1wyps")
+theme_override_styles/hover = SubResource("StyleBoxFlat_xulgb")
+text = "Tornar"
+
+[connection signal="pressed" from="Tornar" to="." method="_on_tornar_pressed"]
