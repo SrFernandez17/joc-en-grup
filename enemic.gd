@@ -33,6 +33,5 @@ func die() -> void:
 
 
 func _on_body_entered(body: Node2D) -> void:
-	pass
 	if is_instance_valid(Global.Jugador) and body == Global.Jugador:
 		get_tree().quit()

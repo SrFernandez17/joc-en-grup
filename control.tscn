@@ -1,7 +1,7 @@
-[gd_scene format=3 uid="uid://wesophwlm1u6"]
+[gd_scene format=3 uid="uid://djytljg0lv3fo"]
 
 [ext_resource type="Texture2D" uid="uid://dv2p84ry4ef2t" path="res://IMATGES/fonsdef.png" id="1_0fbet"]
-[ext_resource type="Script" uid="uid://dt2g8hkroi5am" path="res://control.gd" id="1_qtu10"]
+[ext_resource type="Script" path="res://control.gd" id="1_qtu10"]
 [ext_resource type="FontFile" uid="uid://kr37xjdvjfwh" path="res://IMATGES/04B_30__.TTF" id="2_62e2m"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qtu10"]
@@ -97,7 +97,7 @@ theme_override_fonts/font = ExtResource("2_62e2m")
 theme_override_font_sizes/font_size = 40
 text = "La rateta 
 que 
-escobraba l'escaleta"
+escombrava la sorreta"
 horizontal_alignment = 1
 
 [connection signal="pressed" from="VBoxContainer/Començar" to="." method="_on_començar_pressed"]

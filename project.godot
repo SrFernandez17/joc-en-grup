@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="joc_en_grup"
-run/main_scene="uid://qjam8qdbmy2p"
+run/main_scene="uid://djytljg0lv3fo"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://IMATGES/icon.svg"
 
