@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://d3lwab5b244p3" path="res://personatge.gd" id="1_kdubu"]
 [ext_resource type="Script" uid="uid://dg6r76fqjiu88" path="res://area_2d.gd" id="1_q6r6c"]
 [ext_resource type="FontFile" uid="uid://kr37xjdvjfwh" path="res://IMATGES/04B_30__.TTF" id="3_0h7mo"]
-[ext_resource type="Script" uid="uid://b3eejws8ecw6i" path="res://CONTADOR.gd" id="3_ir8iy"]
+[ext_resource type="Script" path="res://CONTADOR.gd" id="3_ir8iy"]
 [ext_resource type="Texture2D" uid="uid://7bfc1wff10xc" path="res://IMATGES/tilemap.png" id="4_0hol4"]
 [ext_resource type="Script" path="res://contador_temps.gd" id="4_hqns4"]
 [ext_resource type="Texture2D" uid="uid://f3jstm7flvow" path="res://IMATGES/tilemap_player.png" id="4_q6r6c"]
